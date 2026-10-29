@@ -11,7 +11,7 @@ body {
 }
 
 .row img {
-	height: 70vh;
+	height: 50vh;
 	width: auto;
 	flex-shrink: 0;
 }
