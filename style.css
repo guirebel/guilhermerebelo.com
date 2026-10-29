@@ -1,0 +1,17 @@
+body {
+	margin: 40px;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #222;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+figcaption {
+	margin-top: 8px;
+	font-size: 12px;
+	color: #888;
+}
