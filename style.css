@@ -8,12 +8,16 @@ body {
 	display: flex;
 	gap: 8px;
 	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-padding-left: 40px;
+	padding-bottom: 12px;
 }
 
 .row img {
 	height: 50vh;
 	width: auto;
 	flex-shrink: 0;
+	scroll-snap-align: center;
 }
 
 .caption {
