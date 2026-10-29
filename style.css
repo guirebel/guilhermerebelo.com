@@ -62,3 +62,27 @@ nav a:hover {
 .project {
 	margin-bottom: 80px;
 }
+
+@media (max-width: 700px) {
+	body {
+		margin: 16px;
+	}
+
+	.site-header {
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	nav {
+		gap: 16px;
+		flex-wrap: wrap;
+	}
+
+	.row {
+		scroll-padding-left: 16px;
+	}
+
+	.row img {
+		height: 55vh;
+	}
+}
