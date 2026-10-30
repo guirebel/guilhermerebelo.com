@@ -84,6 +84,16 @@ nav a:hover {
 	color: inherit;
 }
 
+.landing {
+	display: flex;
+	justify-content: center;
+}
+
+.landing img {
+	height: 50vh;
+	width: auto;
+}
+
 @media (max-width: 700px) {
 	body {
 		margin: 16px;
@@ -104,6 +114,10 @@ nav a:hover {
 	}
 
 	.row img {
+		height: 55vh;
+	}
+
+	.landing img {
 		height: 55vh;
 	}
 }
