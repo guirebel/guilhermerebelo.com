@@ -75,12 +75,15 @@ a {
 
 /* ===== Capa ===== */
 .cover {
-	min-height: calc(100vh - 90px);
+	/* a capa ocupa exatamente o ecrã por baixo do cabeçalho (82px),
+	   com a imagem ao centro na vertical */
+	min-height: calc(100vh - 82px);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 40px;
 	align-items: end;
-	padding: 4vh var(--side) 10vh;
+	align-content: center;
+	padding: 4vh var(--side) calc(4vh + 30px); /* +30px para a legenda que fica por baixo da imagem */
 }
 
 .cover h1 {
@@ -120,7 +123,7 @@ a {
 	width: auto;
 	height: auto;
 	max-width: 100%;
-	max-height: 68vh;
+	max-height: min(72vh, calc(100vh - 82px - 8vh - 60px)); /* nunca mais alta do que o espaço disponível */
 }
 
 /* ===== Projetos ===== */
