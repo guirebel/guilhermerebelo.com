@@ -54,7 +54,7 @@ a {
 .logo-mark {
 	height: 48px;
 	width: auto;
-	transform: translateY(-8px); /* sobe o logo: o topo do círculo escuro alinha com o topo do "g" */
+	transform: translateY(-10px); /* sobe o logo: o topo do círculo escuro alinha com o topo do "g" */
 }
 
 .logo-name {
@@ -360,7 +360,7 @@ a {
 
 	.logo-mark {
 		height: 42px;
-		transform: translateY(-7px);
+		transform: translateY(-10px);
 	}
 
 	.site-header nav {

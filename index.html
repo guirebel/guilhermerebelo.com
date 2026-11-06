@@ -11,7 +11,7 @@
 		<link rel="icon" href="favicon.svg" type="image/svg+xml">
 		<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
-		<link rel="stylesheet" href="style.css?v=8">
+		<link rel="stylesheet" href="style.css?v=9">
 	</head>
 	<body>
 		<header class="site-header">
@@ -70,12 +70,12 @@
 				</dl>
 			</div>
 			<div class="row">
-				<img src="images/holzhut-01.jpg" alt="fachada comprida revestida de ripas de madeira, sob uma grelha metálica escura, com empilhadoras vermelhas alinhadas no pátio" width="1500" height="793" loading="lazy">
-				<img src="images/holzhut-02.jpg" alt="o volume de madeira com o andar superior em grelha metálica escura em consola, contra o céu azul" width="1500" height="1000" loading="lazy">
-				<img src="images/holzhut-03.jpg" alt="esquina do edifício, com a grelha escura sobre a base de madeira e máquinas amarelas e vermelhas estacionadas" width="1500" height="1000" loading="lazy">
-				<img src="images/holzhut-05.jpg" alt="pormenor da estrutura de madeira e das chapas perfuradas pretas sob a consola" width="1500" height="1331" loading="lazy">
-				<img src="images/holzhut-08.jpg" alt="escada em espiral de aço escuro num interior com pilares e teto de madeira" width="1265" height="1500" loading="lazy">
-				<img src="images/holzhut-10.jpg" alt="a escada em espiral vista de baixo, a subir entre os pisos de escritórios" width="1000" height="1500" loading="lazy">
+				<img src="images/holzhut-01.jpg" alt="fachada comprida revestida de ripas de madeira, sob uma grelha metálica escura, com empilhadoras vermelhas alinhadas no pátio" width="2400" height="1268" loading="lazy">
+				<img src="images/holzhut-02.jpg" alt="o volume de madeira com o andar superior em grelha metálica escura em consola, contra o céu azul" width="2400" height="1600" loading="lazy">
+				<img src="images/holzhut-03.jpg" alt="esquina do edifício, com a grelha escura sobre a base de madeira e máquinas amarelas e vermelhas estacionadas" width="2400" height="1600" loading="lazy">
+				<img src="images/holzhut-05.jpg" alt="pormenor da estrutura de madeira e das chapas perfuradas pretas sob a consola" width="2400" height="2129" loading="lazy">
+				<img src="images/holzhut-08.jpg" alt="escada em espiral de aço escuro num interior com pilares e teto de madeira" width="2024" height="2400" loading="lazy">
+				<img src="images/holzhut-10.jpg" alt="a escada em espiral vista de baixo, a subir entre os pisos de escritórios" width="1600" height="2400" loading="lazy">
 			</div>
 		</section>
 
@@ -158,12 +158,12 @@
 				</dl>
 			</div>
 			<div class="row">
-				<img src="images/die-eisberg-01.jpg" alt="estrutura amarela da escada exterior vista por dentro, entre chapa perfurada e árvores" width="1500" height="1408" loading="lazy">
-				<img src="images/die-eisberg-02.jpg" alt="fachada branca de chapa ondulada com janelas irregulares, ao entardecer" width="1001" height="1500" loading="lazy">
-				<img src="images/die-eisberg-03.jpg" alt="pormenor da fachada branca de chapa ondulada, com uma pala sobre a porta de entrada" width="1500" height="1311" loading="lazy">
-				<img src="images/die-eisberg-04.jpg" alt="varandas brancas sobrepostas com caixilhos de madeira, vistas de baixo" width="917" height="1500" loading="lazy">
-				<img src="images/die-eisberg-06.jpg" alt="galeria exterior estreita entre o vidro e a estrutura branca, com uma pessoa ao fundo" width="1196" height="1500" loading="lazy">
-				<img src="images/die-eisberg-08.jpg" alt="o pátio com a escada amarela e as varandas brancas, entre árvores de outono" width="1500" height="1001" loading="lazy">
+				<img src="images/die-eisberg-01.jpg" alt="estrutura amarela da escada exterior vista por dentro, entre chapa perfurada e árvores" width="2400" height="2252" loading="lazy">
+				<img src="images/die-eisberg-02.jpg" alt="fachada branca de chapa ondulada com janelas irregulares, ao entardecer" width="1602" height="2400" loading="lazy">
+				<img src="images/die-eisberg-03.jpg" alt="pormenor da fachada branca de chapa ondulada, com uma pala sobre a porta de entrada" width="2400" height="2097" loading="lazy">
+				<img src="images/die-eisberg-04.jpg" alt="varandas brancas sobrepostas com caixilhos de madeira, vistas de baixo" width="1467" height="2400" loading="lazy">
+				<img src="images/die-eisberg-06.jpg" alt="galeria exterior estreita entre o vidro e a estrutura branca, com uma pessoa ao fundo" width="1914" height="2400" loading="lazy">
+				<img src="images/die-eisberg-08.jpg" alt="o pátio com a escada amarela e as varandas brancas, entre árvores de outono" width="2400" height="1602" loading="lazy">
 			</div>
 		</section>
 
@@ -298,20 +298,6 @@
 		</section>
 		</main>
 
-		<section class="press">
-			<h3>Imagens publicadas em</h3>
-			<div class="press-track" id="press-track">
-				<ul>
-					<li>The New York Times</li>
-					<li>Dezeen</li>
-					<li>Designboom</li>
-					<li>ArchDaily</li>
-					<li>Archilovers</li>
-					<li>Cube Magazine</li>
-				</ul>
-			</div>
-		</section>
-
 		<footer class="site-footer" id="contacto">
 			<p class="footer-text">Para encomendas e projetos, escreva para <a href="mailto:estudio@guilhermerebelo.com">estudio@guilhermerebelo.com</a></p>
 			<div class="footer-info">
@@ -347,11 +333,6 @@
 			link.append(image, caption);
 			document.getElementById("cover-image").append(link);
 
-			// 2. "Publicado em": duplica a lista para a faixa andar sem fim
-			const track = document.getElementById("press-track");
-			const copy = track.querySelector("ul").cloneNode(true);
-			copy.setAttribute("aria-hidden", "true");
-			track.append(copy);
 		</script>
 	</body>
 </html>
