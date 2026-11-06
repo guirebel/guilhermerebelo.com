@@ -11,7 +11,7 @@
 		<link rel="icon" href="favicon.svg" type="image/svg+xml">
 		<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
-		<link rel="stylesheet" href="style.css?v=5">
+		<link rel="stylesheet" href="style.css?v=8">
 	</head>
 	<body>
 		<header class="site-header">
@@ -50,5 +50,14 @@
 				<span>© 2026 Guilherme Rebelo</span>
 			</div>
 		</footer>
+		<script>
+			// esconde o nome quando a página desce mais de 40px
+			const header = document.querySelector(".site-header");
+			function updateHeader() {
+				header.classList.toggle("scrolled", window.scrollY > 40);
+			}
+			window.addEventListener("scroll", updateHeader, { passive: true });
+			updateHeader();
+		</script>
 	</body>
 </html>
