@@ -463,7 +463,7 @@ a {
 	grid-column: 1;
 	justify-self: start;
 	height: 64px;
-	transform: none;
+	transform: translateY(-6px); /* o círculo azul do logo fica à altura do ponto azul do "i" */
 }
 
 .logo-name {
@@ -487,7 +487,7 @@ a {
 @media (max-width: 800px) {
 	.logo-mark {
 		height: 46px;
-		transform: none;
+		transform: translateY(-5.5px);
 	}
 
 	.logo-name {
