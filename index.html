@@ -54,7 +54,7 @@
 		<link rel="icon" href="favicon.svg" type="image/svg+xml">
 		<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
-		<link rel="stylesheet" href="style.css?v=13">
+		<link rel="stylesheet" href="style.css?v=14">
 	</head>
 	<body>
 		<header class="site-header">
@@ -356,6 +356,61 @@
 			link.append(image, caption);
 			document.getElementById("cover-image").append(link);
 
+			//2. Fotografias: clicar abre a fotografia em grande
+			let current = null;
+			function place(element, top, left, width, height) {
+				element.style.top = top + "px";
+				element.style.left = left + "px";
+				element.style.width = width + "px";
+				element.style.height = height + "px";
+			}
+
+			function zoomIn(img) {
+				const start = img.getBoundingClientRect();
+
+				const bg = document.createElement("div");
+				bg.className = "zoom-bg";
+
+				const big = img.cloneNode();
+				big.className = "zoom-img";
+				big.loading = "eager";
+
+				place(big, start.top, start.left, start.width, start.height);
+				document.body.append(bg, big);
+				big.getBoundingClientRect();
+
+				const margin = window.innerWidth < 800 ? 12 : 40;
+				const scale = Math.min(
+					(window.innerWidth - 2 * margin) / img.naturalWidth,
+					(window.innerHeight - 2 * margin) / img.naturalHeight
+				);
+				const width = img.naturalWidth * scale;
+				const height = img.naturalHeight * scale;
+				place(big, (window.innerHeight - height) / 2, (window.innerWidth - width) / 2, width, height);
+				bg.classList.add("open");
+
+				current = { img, bg, big };
+				bg.onclick = zoomOut;
+				big.onclick = zoomOut;
+			}
+
+			function zoomOut () {
+				if (!current) return;
+				const { img, bg, big } = current;
+				current = null;
+				const end = img.getBoundingClientRect();
+				place(big, end.top, end.left, end.width, end.height);
+				bg.classList.remove("open");
+				setTimeout(() => { bg.remove(); big.remove(); }, 450);
+			}
+
+			document.querySelectorAll(".row img").forEach(img => {
+				img.addEventListener("click", () => zoomIn(img));
+			});
+			document.addEventListener("keydown", event => {
+				if (event.key === "Escape") zoomOut();
+			});
+			window.addEventListener("scroll", zoomOut, { passive:true});
 		</script>
 	</body>
 </html>

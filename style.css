@@ -225,6 +225,7 @@ a {
 	flex-shrink: 0;
 	scroll-snap-align: start;
 	background: #e6e4dd;
+	cursor: zoom-in;
 }
 
 /* espaço depois de cada fila, antes do projeto seguinte */
@@ -236,6 +237,29 @@ a {
 .caption {
 	font: 400 12.5px var(--mono);
 	color: var(--mute);
+}
+
+.zoom-bg {
+	position: fixed;
+	inset: 0;
+	z-index: 50;
+	background: var(--paper);
+	opacity: 0;
+	transition: opacity 0.35s;
+	cursor: zoom-out;
+}
+
+.zoom-bg.open {
+	opacity: 1;
+}
+
+.zoom-img {
+	position: fixed;
+	z-index: 51;
+	object-fit: contain;
+	cursor: zoom-out;
+	transition: top 0.45s, left 0.45s, width 0.45s, height 0.45s;
+	transition-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 /* ===== Publicado em ===== */
