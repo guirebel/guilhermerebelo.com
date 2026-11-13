@@ -98,6 +98,20 @@ a {
 	color: var(--ink);
 }
 
+/* ícone do Instagram no menu */
+.site-header nav {
+	align-items: center;
+}
+
+.nav-ig {
+	display: flex;
+}
+
+.nav-ig svg {
+	width: 20px;
+	height: 20px;
+}
+
 /* ===== Capa ===== */
 .cover {
 	/* a capa ocupa exatamente o ecrã por baixo do cabeçalho (82px),
