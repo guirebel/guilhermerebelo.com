@@ -339,6 +339,24 @@ a {
 	margin: 0 0 1em;
 }
 
+/* o retrato, na coluna da esquerda, por baixo do título */
+.about-photo {
+	grid-column: 1 / 5;
+	grid-row: 2;
+	margin: 48px 0 0;
+}
+
+.about-photo img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.about-text {
+	grid-row: 2;
+	margin-top: 42px;
+}
+
 /* ===== Rodapé ===== */
 .site-footer {
 	display: grid;
@@ -422,8 +440,22 @@ a {
 	.title h2,
 	.title dl,
 	.about h1,
+	.about-photo,
 	.about-text {
 		grid-column: 1;
+	}
+
+	.about-photo,
+	.about-text {
+		grid-row: auto;
+	}
+
+	.about-photo {
+		margin: 0 0 32px;
+	}
+
+	.about-text {
+		margin-top: 0;
 	}
 
 	.about h1 {
