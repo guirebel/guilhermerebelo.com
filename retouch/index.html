@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guilherme Rebelo — Retouch Portfolio</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Campaign retouching by Guilherme Rebelo: before and after.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Guilherme Rebelo — Retouch Portfolio">
+<meta property="og:description" content="Campaign retouching, invisible by design. Drag each image to compare before and after.">
+<meta property="og:url" content="https://guilhermerebelo.com/retouch/">
+<meta property="og:image" content="https://guilhermerebelo.com/retouch/img/ShareNow_V_M37A9965.jpg">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --paper:#f4f3ef; --ink:#161615; --mute:#5f5d58; --mute-2:#77756f; --hair:#d8d6cf; --sky:#8fbfe3; --ph:#e6e4dd;
+    --serif:"Newsreader",Georgia,serif; --sans:"Hanken Grotesk",Helvetica,Arial,sans-serif; --mono:"IBM Plex Mono",Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--paper);color:var(--ink)}
+  body{font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  a:hover{color:var(--mute)}
+  .wrap{padding:0 32px}
+
+  /* header — matches guilhermerebelo.com */
+  header{position:sticky;top:0;z-index:20;background:var(--paper)}
+  .bar{display:flex;justify-content:space-between;align-items:center;padding:18px 32px}
+  .logo{display:flex;flex-direction:column;font-size:22px;line-height:1.05;letter-spacing:-.01em}
+  .logo:hover{color:inherit}
+  .logo > span:first-child{font-weight:500}
+  .logo > span + span{color:var(--mute-2)}
+  .dot-i{position:relative}
+  .dot-i::after{content:"";position:absolute;left:50%;top:.1em;width:4px;height:4px;border-radius:50%;background:var(--sky);transform:translateX(-50%)}
+  nav{display:flex;align-items:center;gap:28px}
+  nav a{font-size:18px;color:var(--mute-2)}
+  nav a:hover{color:var(--ink)}
+  .nav-ig{display:flex}
+  .nav-ig svg{width:20px;height:20px}
+
+  /* hero */
+  .hero{padding:96px 0 72px;display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:end}
+  h1{margin:0;font-family:var(--serif);font-weight:300;font-size:clamp(32px,3.8vw,56px);line-height:1.08;letter-spacing:-.015em;text-wrap:balance}
+  h1 em{font-style:italic;color:var(--mute-2)}
+  .intro{margin:0;color:#2b2a28;max-width:440px;text-wrap:pretty}
+  .hint{display:flex;align-items:center;gap:10px;margin-top:18px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+  .hint i{width:7px;height:7px;border-radius:50%;background:var(--sky);display:inline-block}
+
+  /* campaigns */
+  h2{font:300 clamp(28px,2.9vw,42px)/1.1 var(--serif);letter-spacing:-.01em;text-wrap:balance}
+  .campaign{scroll-margin-top:70px}
+  .title{display:grid;grid-template-columns:repeat(12,1fr);gap:0 20px;padding:14vh 0 5vh;border-top:1px solid var(--hair)}
+  .title h2{grid-column:1 / 9;margin:0}
+  .title dl{grid-column:1 / 9;margin:16px 0 0;display:flex;flex-wrap:wrap;gap:4px 28px}
+  .title dt{display:inline;margin-right:6px;font:400 12px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--mute-2)}
+  .title dd{display:inline;margin:0}
+  .campaign .grid{margin-bottom:12vh}
+  .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;align-items:start}
+  .w12{grid-column:span 12}.w8{grid-column:span 8}.w6{grid-column:span 6}.w4{grid-column:span 4}
+
+  /* before / after */
+  figure{margin:0}
+  .ba{position:relative;overflow:hidden;background:var(--ph);user-select:none;-webkit-user-select:none;touch-action:pan-y;cursor:ew-resize;--pos:50%}
+  .ba img{display:block;width:100%;height:auto;pointer-events:none}
+  .ba .before{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+  .ba .line{position:absolute;top:0;bottom:0;left:var(--pos);width:1px;background:rgba(255,255,255,.9);box-shadow:0 0 0 .5px rgba(0,0,0,.15);transform:translateX(-.5px);pointer-events:none}
+  .ba .knob{position:absolute;top:50%;left:var(--pos);width:40px;height:40px;border-radius:50%;background:rgba(244,243,239,.95);transform:translate(-50%,-50%);display:grid;place-items:center;box-shadow:0 1px 6px rgba(0,0,0,.18);pointer-events:none}
+  .ba .knob::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--sky)}
+  .ba .tag{position:absolute;top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;background:rgba(244,243,239,.88);color:var(--ink);pointer-events:none}
+  .ba .tag.b{left:14px}.ba .tag.a{right:14px}
+  .ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;margin:0;cursor:ew-resize}
+  .ba:focus-within .knob{outline:2px solid var(--sky);outline-offset:3px}
+
+  /* about — matches the Sobre page */
+  .about{display:grid;grid-template-columns:repeat(12,1fr);gap:0 20px;padding:14vh 0 16vh;border-top:1px solid var(--hair);scroll-margin-top:70px}
+  .about h2{grid-column:1 / 5;margin:0;font-size:clamp(28px,2.9vw,42px)}
+  .about-photo{grid-column:1 / 5;grid-row:2;margin:48px 0 0}
+  .about-photo img{display:block;width:100%;height:auto}
+  .about-text{grid-column:6 / 12;grid-row:2;margin-top:42px;font:300 clamp(20px,1.7vw,26px)/1.4 var(--serif)}
+  .about-text p{margin:0 0 1em;text-wrap:pretty}
+
+  /* footer — matches guilhermerebelo.com */
+  footer{display:grid;grid-template-columns:2fr 1fr;gap:40px;padding:16vh 32px 40px;border-top:1px solid var(--ink)}
+  .footer-text{margin:0;font:300 clamp(26px,2.6vw,38px)/1.15 var(--serif)}
+  .footer-text a{border-bottom:1px solid var(--hair)}
+  .footer-text a:hover{color:inherit;border-color:var(--ink)}
+  .footer-info{display:flex;flex-direction:column;justify-content:flex-end;gap:4px;color:var(--mute-2)}
+  .footer-info a{color:var(--ink)}
+
+  @media (max-width:900px){
+    .wrap{padding:0 16px}
+    .bar{padding:16px}
+    .logo{font-size:19px}
+    nav{gap:18px}
+    nav a{font-size:16px}
+    .about{grid-template-columns:1fr;padding-top:10vh}
+    .about h2,.about-photo,.about-text{grid-column:1;grid-row:auto}
+    .about-photo{margin:32px 0}
+    .about-text{margin-top:0}
+    footer{grid-template-columns:1fr;padding:12vh 16px 32px}
+    .hero{grid-template-columns:1fr;padding:56px 0 48px;gap:24px}
+    .title{grid-template-columns:1fr;padding-top:10vh}
+    .title h2,.title dl{grid-column:1}
+    .w8,.w6,.w4{grid-column:span 12}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="logo" href="../index.html" aria-label="Guilherme Rebelo">
+      <span>gu<span class="dot-i">ı</span>lherme</span>
+      <span>rebelo</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#top">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-ig" href="https://www.instagram.com/guilhermerebelo.foto/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 1000 1000" aria-hidden="true"> <path fill="currentColor" transform="translate(-2.5 -2.5)" d="M295.42,6c-53.2,2.51-89.53,11-121.29,23.48-32.87,12.81-60.73,30-88.45,57.82S40.89,143,28.17,175.92c-12.31,31.83-20.65,68.19-23,121.42S2.3,367.68,2.56,503.46,3.42,656.26,6,709.6c2.54,53.19,11,89.51,23.48,121.28,12.83,32.87,30,60.72,57.83,88.45S143,964.09,176,976.83c31.8,12.29,68.17,20.67,121.39,23s70.35,2.87,206.09,2.61,152.83-.86,206.16-3.39S799.1,988,830.88,975.58c32.87-12.86,60.74-30,88.45-57.84S964.1,862,976.81,829.06c12.32-31.8,20.69-68.17,23-121.35,2.33-53.37,2.88-70.41,2.62-206.17s-.87-152.78-3.4-206.1-11-89.53-23.47-121.32c-12.85-32.87-30-60.7-57.82-88.45S862,40.87,829.07,28.19c-31.82-12.31-68.17-20.7-121.39-23S637.33,2.3,501.54,2.56,348.75,3.4,295.42,6m5.84,903.88c-48.75-2.12-75.22-10.22-92.86-17-23.36-9-40-19.88-57.58-37.29s-28.38-34.11-37.5-57.42c-6.85-17.64-15.1-44.08-17.38-92.83-2.48-52.69-3-68.51-3.29-202s.22-149.29,2.53-202c2.08-48.71,10.23-75.21,17-92.84,9-23.39,19.84-40,37.29-57.57s34.1-28.39,57.43-37.51c17.62-6.88,44.06-15.06,92.79-17.38,52.73-2.5,68.53-3,202-3.29s149.31.21,202.06,2.53c48.71,2.12,75.22,10.19,92.83,17,23.37,9,40,19.81,57.57,37.29s28.4,34.07,37.52,57.45c6.89,17.57,15.07,44,17.37,92.76,2.51,52.73,3.08,68.54,3.32,202s-.23,149.31-2.54,202c-2.13,48.75-10.21,75.23-17,92.89-9,23.35-19.85,40-37.31,57.56s-34.09,28.38-57.43,37.5c-17.6,6.87-44.07,15.07-92.76,17.39-52.73,2.48-68.53,3-202.05,3.29s-149.27-.25-202-2.53m407.6-674.61a60,60,0,1,0,59.88-60.1,60,60,0,0,0-59.88,60.1M245.77,503c.28,141.8,115.44,256.49,257.21,256.22S759.52,643.8,759.25,502,643.79,245.48,502,245.76,245.5,361.22,245.77,503m90.06-.18a166.67,166.67,0,1,1,167,166.34,166.65,166.65,0,0,1-167-166.34"/> </svg></a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <section class="hero">
+    <h1>Campaign retouching, <em>invisible by design.</em></h1>
+    <div>
+      <p class="intro">Campaign post-production for automotive and fashion brands: branding updates, clean-up, colour and finishing, delivered to print and web standard.</p>
+      <p class="hint"><i aria-hidden="true"></i>Drag across each image to compare</p>
+    </div>
+  </section>
+
+  <!-- Campaign 01 -->
+  <section class="campaign" aria-labelledby="c1">
+    <div class="title">
+      <h2 id="c1">Share Now — BMW X2</h2>
+      <dl><div><dt>Briefing</dt><dd>Swap the old DriveNow graphics for the new Share Now branding, clean up the scenes and finish colour.</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w12">
+        <div class="ba"><img src="img/2J1A0960_ID_4050.jpg" alt="After: gold BMW X2 in front of a colonnade" width="1800" height="1200" loading="lazy"><img class="before" src="img/2J1A0960_ID_4050_B4.jpg" alt="Before: unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/2J1A1224_ID_5382.jpg" alt="After: gold BMW X2 parked by stone steps" width="1800" height="1200" loading="lazy"><img class="before" src="img/2J1A1224_ID_5382_B4.jpg" alt="Before: unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/2J1A1364_ID_4306.jpg" alt="After: gold BMW X2 seen from above on cobblestones" width="1800" height="1200" loading="lazy"><img class="before" src="img/2J1A1364_ID_4306_B4.jpg" alt="Before: unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Campaign 02 -->
+  <section class="campaign" aria-labelledby="c2">
+    <div class="title">
+      <h2 id="c2">Share Now × Free2Move — Fiat 500e</h2>
+      <dl><div><dt>Briefing</dt><dd>Apply the new Free2Move branding to the car, add greenery to the facades, clean up and finish colour.</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w6">
+        <div class="ba"><img src="img/DSCF4120.jpg" alt="After: grey Fiat 500e by a glass office building" width="1800" height="1200" loading="lazy"><img class="before" src="img/DSCF4120_B4.jpg" alt="Before: unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/DSCF4205.jpg" alt="After: grey Fiat 500e in front of a green facade" width="1800" height="1200" loading="lazy"><img class="before" src="img/DSCF4205_B4.jpg" alt="Before: unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/DSCF4115.jpg" alt="After: grey Fiat 500e on a street between buildings" width="1200" height="1800" loading="lazy"><img class="before" src="img/DSCF4115_B4.jpg" alt="Before: unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/DSCF4211.jpg" alt="After: close-up of the Fiat 500e door with Share Now and Free2Move logos" width="1200" height="1800" loading="lazy"><img class="before" src="img/DSCF4211_B4.jpg" alt="Before: unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Campaign 03 -->
+  <section class="campaign" aria-labelledby="c3">
+    <div class="title">
+      <h2 id="c3">Share Now — Markthalle</h2>
+      <dl><div><dt>Briefing</dt><dd>Colour, styling and clean-up for a lifestyle shoot with talent.</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w12">
+        <div class="ba"><img src="img/ShareNow_C_0320.jpg" alt="After: white Fiat 500X in front of a flower market" width="1800" height="1350" loading="lazy"><img class="before" src="img/ShareNow_C_0320_B4.jpg" alt="Before: unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/ShareNow_C_0436.jpg" alt="After: woman with flowers seen from inside the car" width="1800" height="1350" loading="lazy"><img class="before" src="img/ShareNow_C_0436_B4.jpg" alt="Before: unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/ShareNow_D_0582.jpg" alt="After: woman loading flowers into the car boot" width="1800" height="1350" loading="lazy"><img class="before" src="img/ShareNow_D_0582_B4.jpg" alt="Before: unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div>
+      </figure>
+      <figure class="w12">
+        <div class="ba"><img src="img/ShareNow_D_0637.jpg" alt="After: woman holding flowers beside a white Share Now car at the market" width="1800" height="1350" loading="lazy"><img class="before" src="img/ShareNow_D_0637_B4.jpg" alt="Before: unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Campaign 04 -->
+  <section class="campaign" aria-labelledby="c4">
+    <div class="title">
+      <h2 id="c4">Share Now — Peugeot 2008</h2>
+      <dl><div><dt>Briefing</dt><dd>Replace the wheels across the series, clean up the scenes and finish colour and light.</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w12">
+        <div class="ba"><img src="img/ShareNow_V_M37A9275.jpg" alt="After: grey Peugeot 2008 in front of a wooden facade with white fins" width="1800" height="1201" loading="lazy"><img class="before" src="img/ShareNow_V_M37A9275_B4.jpg" alt="Before: unretouched raw file" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/ShareNow_V_M37A9378.jpg" alt="After: Peugeot 2008 at the corner of a white classical building" width="1800" height="1201" loading="lazy"><img class="before" src="img/ShareNow_V_M37A9378_B4.jpg" alt="Before: unretouched raw file" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/ShareNow_V_M37A9789.jpg" alt="After: Peugeot 2008 by the Danube with the Vienna skyline" width="1800" height="1201" loading="lazy"><img class="before" src="img/ShareNow_V_M37A9789_B4.jpg" alt="Before: unretouched raw file" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/ShareNow_V_M37A9837.jpg" alt="After: Peugeot 2008 by the river at dusk" width="1800" height="1201" loading="lazy"><img class="before" src="img/ShareNow_V_M37A9837_B4.jpg" alt="Before: unretouched raw file" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/ShareNow_V_M37A9965.jpg" alt="After: Peugeot 2008 in front of the Prater ferris wheel and swing carousel" width="1800" height="1201" loading="lazy"><img class="before" src="img/ShareNow_V_M37A9965_B4.jpg" alt="Before: unretouched raw file" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
+    <figure class="about-photo"><img src="../images/guilherme-rebelo.jpg" alt="Portrait of Guilherme Rebelo" width="1000" height="1000" loading="lazy"></figure>
+    <div class="about-text">
+      <p>Born in São Paulo, graduated in Architecture in 2008.</p>
+      <p>Alongside architectural photography, I’ve worked as a retoucher since 2016: first leading the retouching team at Global Brands Group in London, then freelance for automotive and fashion campaigns. Since 2025, generative AI has been part of my everyday workflow.</p>
+      <p>I work between Lisbon and São Paulo and I’m available for projects anywhere.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <p class="footer-text">Have a campaign that needs finishing? Write to <a href="mailto:estudio@guilhermerebelo.com">estudio@guilhermerebelo.com</a></p>
+  <div class="footer-info">
+    <span>Lisbon · São Paulo</span>
+    <a href="tel:+351912202000">+351 912 202 000</a>
+    <a href="https://www.instagram.com/guilhermerebelo.foto/" target="_blank" rel="noopener">Instagram</a>
+    <a href="../index.html">guilhermerebelo.com</a>
+    <span>© 2026 Guilherme Rebelo</span>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.ba').forEach(function (el) {
+    var input = el.querySelector('input');
+    function set(v) { el.style.setProperty('--pos', v + '%'); }
+    input.addEventListener('input', function () { set(input.value); });
+    // follow the pointer while hovering on desktop, drag on touch
+    el.addEventListener('pointermove', function (e) {
+      if (e.pointerType === 'mouse' || e.buttons) {
+        var r = el.getBoundingClientRect();
+        var v = Math.max(0, Math.min(100, ((e.clientX - r.left) / r.width) * 100));
+        input.value = v; set(v);
+      }
+    });
+  });
+</script>
+</body>
+</html>
