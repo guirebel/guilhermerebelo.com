@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Guilherme Rebelo — Retouch Portfolio</title>
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Campaign retouching by Guilherme Rebelo: before and after.">
+<meta name="description" content="Retouching by Guilherme Rebelo for automotive campaigns and architecture and interiors photography: before and after.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Guilherme Rebelo — Retouch Portfolio">
-<meta property="og:description" content="Campaign retouching, invisible by design. Drag each image to compare before and after.">
+<meta property="og:description" content="Retouching, invisible by design: automotive campaigns, architecture and interiors. Drag each image to compare before and after.">
 <meta property="og:url" content="https://guilhermerebelo.com/retouch/">
 <meta property="og:image" content="https://guilhermerebelo.com/retouch/img/ShareNow_V_M37A9965.jpg">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
@@ -77,6 +77,13 @@
   .ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;margin:0;cursor:ew-resize}
   .ba:focus-within .knob{outline:2px solid var(--sky);outline-offset:3px}
 
+  /* chapters */
+  .chapter{padding:16vh 0 4vh;border-top:1px solid var(--ink);scroll-margin-top:70px}
+  .chapter h2{margin:0;font-size:clamp(44px,6vw,88px);line-height:1}
+  .chapter p{margin:14px 0 0;font:400 12px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}
+  figcaption{margin-top:10px;font:400 12px/1.5 var(--mono);color:var(--mute);letter-spacing:.02em}
+  .w6.c{grid-column:4 / span 6}
+
   /* about — matches the Sobre page */
   .about{display:grid;grid-template-columns:repeat(12,1fr);gap:0 20px;padding:14vh 0 16vh;border-top:1px solid var(--hair);scroll-margin-top:70px}
   .about h2{grid-column:1 / 5;margin:0;font-size:clamp(28px,2.9vw,42px)}
@@ -107,7 +114,19 @@
     .hero{grid-template-columns:1fr;padding:56px 0 48px;gap:24px}
     .title{grid-template-columns:1fr;padding-top:10vh}
     .title h2,.title dl{grid-column:1}
-    .w8,.w6,.w4{grid-column:span 12}
+    .w8,.w6,.w4,.w6.c{grid-column:span 12}
+    nav{gap:14px}
+    nav a{font-size:15px}
+  }
+  @media (max-width:480px){
+    .nav-ig{display:none}
+  }
+  @media (max-width:380px){
+    .bar{gap:12px}
+    nav{gap:10px}
+    nav a{font-size:13.5px}
+    .logo{font-size:17px}
+    .chapter{padding-top:10vh}
   }
 </style>
 </head>
@@ -120,7 +139,8 @@
       <span>rebelo</span>
     </a>
     <nav aria-label="Main">
-      <a href="#top">Projects</a>
+      <a href="#products">Products</a>
+      <a href="#architecture">Architecture</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
       <a class="nav-ig" href="https://www.instagram.com/guilhermerebelo.foto/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 1000 1000" aria-hidden="true"> <path fill="currentColor" transform="translate(-2.5 -2.5)" d="M295.42,6c-53.2,2.51-89.53,11-121.29,23.48-32.87,12.81-60.73,30-88.45,57.82S40.89,143,28.17,175.92c-12.31,31.83-20.65,68.19-23,121.42S2.3,367.68,2.56,503.46,3.42,656.26,6,709.6c2.54,53.19,11,89.51,23.48,121.28,12.83,32.87,30,60.72,57.83,88.45S143,964.09,176,976.83c31.8,12.29,68.17,20.67,121.39,23s70.35,2.87,206.09,2.61,152.83-.86,206.16-3.39S799.1,988,830.88,975.58c32.87-12.86,60.74-30,88.45-57.84S964.1,862,976.81,829.06c12.32-31.8,20.69-68.17,23-121.35,2.33-53.37,2.88-70.41,2.62-206.17s-.87-152.78-3.4-206.1-11-89.53-23.47-121.32c-12.85-32.87-30-60.7-57.82-88.45S862,40.87,829.07,28.19c-31.82-12.31-68.17-20.7-121.39-23S637.33,2.3,501.54,2.56,348.75,3.4,295.42,6m5.84,903.88c-48.75-2.12-75.22-10.22-92.86-17-23.36-9-40-19.88-57.58-37.29s-28.38-34.11-37.5-57.42c-6.85-17.64-15.1-44.08-17.38-92.83-2.48-52.69-3-68.51-3.29-202s.22-149.29,2.53-202c2.08-48.71,10.23-75.21,17-92.84,9-23.39,19.84-40,37.29-57.57s34.1-28.39,57.43-37.51c17.62-6.88,44.06-15.06,92.79-17.38,52.73-2.5,68.53-3,202-3.29s149.31.21,202.06,2.53c48.71,2.12,75.22,10.19,92.83,17,23.37,9,40,19.81,57.57,37.29s28.4,34.07,37.52,57.45c6.89,17.57,15.07,44,17.37,92.76,2.51,52.73,3.08,68.54,3.32,202s-.23,149.31-2.54,202c-2.13,48.75-10.21,75.23-17,92.89-9,23.35-19.85,40-37.31,57.56s-34.09,28.38-57.43,37.5c-17.6,6.87-44.07,15.07-92.76,17.39-52.73,2.48-68.53,3-202.05,3.29s-149.27-.25-202-2.53m407.6-674.61a60,60,0,1,0,59.88-60.1,60,60,0,0,0-59.88,60.1M245.77,503c.28,141.8,115.44,256.49,257.21,256.22S759.52,643.8,759.25,502,643.79,245.48,502,245.76,245.5,361.22,245.77,503m90.06-.18a166.67,166.67,0,1,1,167,166.34,166.65,166.65,0,0,1-167-166.34"/> </svg></a>
@@ -131,11 +151,16 @@
 <main class="wrap" id="top">
 
   <section class="hero">
-    <h1>Campaign retouching, <em>invisible by design.</em></h1>
+    <h1>Retouching, <em>invisible by design.</em></h1>
     <div>
-      <p class="intro">Campaign post-production for automotive and fashion brands: branding updates, clean-up, colour and finishing, delivered to print and web standard.</p>
+      <p class="intro">Post-production for automotive campaigns and for architecture and interiors photography: branding updates, clean-up, perspective, windows, colour and finishing, delivered to print and web standard.</p>
       <p class="hint"><i aria-hidden="true"></i>Drag across each image to compare</p>
     </div>
+  </section>
+
+  <section class="chapter" id="products" aria-labelledby="ch-products">
+    <h2 id="ch-products">Products</h2>
+    <p>Automotive campaigns · Share Now, Free2Move</p>
   </section>
 
   <!-- Campaign 01 -->
@@ -226,12 +251,244 @@
     </div>
   </section>
 
+  <section class="chapter" id="architecture" aria-labelledby="ch-arch">
+    <h2 id="ch-arch">Architecture</h2>
+    <p>Architecture &amp; interiors · retouching since 2016</p>
+  </section>
+
+  <section class="campaign" aria-labelledby="a1">
+    <div class="title">
+      <h2 id="a1">Haus Lademann</h2>
+      <dl><div><dt>Project by</dt><dd>Christmann Berlin</dd></div><div><dt>Location</dt><dd>Berlin</dd></div><div><dt>Photo</dt><dd>Guilherme Rebelo</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w12">
+        <div class="ba"><img src="img/arch_p05.jpg" alt="After: Haus Lademann, retouched" width="1800" height="1490" loading="lazy"><img class="before" src="img/arch_p05_B4.jpg" alt="Before: Haus Lademann, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Haus Lademann"></div>
+        <figcaption>Cables &amp; signage removed · Street patched · Bikes removed · Verticals</figcaption>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/arch_p04.jpg" alt="After: Haus Lademann, retouched" width="1800" height="1198" loading="lazy"><img class="before" src="img/arch_p04_B4.jpg" alt="Before: Haus Lademann, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Haus Lademann"></div>
+        <figcaption>Lamp post removed · Bike racks removed · Reflections cleaned · Dusk colour</figcaption>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/arch_p03.jpg" alt="After: Haus Lademann, retouched" width="1800" height="1200" loading="lazy"><img class="before" src="img/arch_p03_B4.jpg" alt="Before: Haus Lademann, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Haus Lademann"></div>
+        <figcaption>Windows recovered · Crane removed · Fittings removed · Shadows lifted</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="campaign" aria-labelledby="a2">
+    <div class="title">
+      <h2 id="a2">Die Eisberg</h2>
+      <dl><div><dt>Project by</dt><dd>rundzwei Architekten</dd></div><div><dt>Location</dt><dd>Berlin</dd></div><div><dt>Photo</dt><dd>Guilherme Rebelo</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w6 c">
+        <div class="ba"><img src="img/arch_p23.jpg" alt="After: Die Eisberg, retouched" width="1201" height="1800" loading="lazy"><img class="before" src="img/arch_p23_B4.jpg" alt="Before: Die Eisberg, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Die Eisberg"></div>
+        <figcaption>Graffiti removed · Street clean-up · Sky</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="campaign" aria-labelledby="a3">
+    <div class="title">
+      <h2 id="a3">Holzhut</h2>
+      <dl><div><dt>Project by</dt><dd>rundzwei Architekten</dd></div><div><dt>Location</dt><dd>Stuttgart</dd></div><div><dt>Photo</dt><dd>Guilherme Rebelo</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w12">
+        <div class="ba"><img src="img/arch_p24.jpg" alt="After: Holzhut, retouched" width="1800" height="1198" loading="lazy"><img class="before" src="img/arch_p24_B4.jpg" alt="Before: Holzhut, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Holzhut"></div>
+        <figcaption>Banner removed · Cone &amp; signage removed · Façade clean-up · Sky</figcaption>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/arch_p26.jpg" alt="After: Holzhut, retouched" width="1800" height="950" loading="lazy"><img class="before" src="img/arch_p26_B4.jpg" alt="Before: Holzhut, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Holzhut"></div>
+        <figcaption>Sky recovered · Exposure balance · Colour</figcaption>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/arch_p25.jpg" alt="After: Holzhut, retouched" width="1800" height="1198" loading="lazy"><img class="before" src="img/arch_p25_B4.jpg" alt="Before: Holzhut, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Holzhut"></div>
+        <figcaption>Dusk sky · Ground-floor windows recovered · Loader recoloured · Cones removed</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="campaign" aria-labelledby="a4">
+    <div class="title">
+      <h2 id="a4">Kleine Bremer Höhe</h2>
+      <dl><div><dt>Project by</dt><dd>rundzwei Architekten</dd></div><div><dt>Location</dt><dd>Berlin</dd></div><div><dt>Photo</dt><dd>Guilherme Rebelo</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w6 c">
+        <div class="ba"><img src="img/arch_p27.jpg" alt="After: Kleine Bremer Höhe, retouched" width="1197" height="1800" loading="lazy"><img class="before" src="img/arch_p27_B4.jpg" alt="Before: Kleine Bremer Höhe, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Kleine Bremer Höhe"></div>
+        <figcaption>Exposure blending · Window recovered · Colour</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="campaign" aria-labelledby="a5">
+    <div class="title">
+      <h2 id="a5">Clay Street</h2>
+      <dl><div><dt>Project by</dt><dd>Piercy &amp; Company</dd></div><div><dt>Location</dt><dd>London</dd></div><div><dt>Photo</dt><dd>Jack Hobhouse</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w6">
+        <div class="ba"><img src="img/arch_p00.jpg" alt="After: Clay Street, retouched" width="1800" height="1200" loading="lazy"><img class="before" src="img/arch_p00_B4.jpg" alt="Before: Clay Street, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Clay Street"></div>
+        <figcaption>Verticals &amp; horizon · Street clean-up · Façade fixtures removed · Sky</figcaption>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/arch_p01.jpg" alt="After: Clay Street, retouched" width="1200" height="1800" loading="lazy"><img class="before" src="img/arch_p01_B4.jpg" alt="Before: Clay Street, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Clay Street"></div>
+        <figcaption>Colour cast neutralised · Reflections removed · Floor cleaned</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="campaign" aria-labelledby="a6">
+    <div class="title">
+      <h2 id="a6">ADAC office</h2>
+      <dl><div><dt>Project by</dt><dd>Concept District</dd></div><div><dt>Location</dt><dd>Berlin</dd></div><div><dt>Photo</dt><dd>Guilherme Rebelo</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w12">
+        <div class="ba"><img src="img/arch_p06.jpg" alt="After: ADAC office, retouched" width="1800" height="1258" loading="lazy"><img class="before" src="img/arch_p06_B4.jpg" alt="Before: ADAC office, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: ADAC office"></div>
+        <figcaption>AC unit removed · Sockets &amp; fittings removed · Ceiling cleaned · Crop</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="campaign" aria-labelledby="a7">
+    <div class="title">
+      <h2 id="a7">Campus building</h2>
+      <dl><div><dt>Location</dt><dd>Germany</dd></div><div><dt>Photo</dt><dd>Werner Huthmacher</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w12">
+        <div class="ba"><img src="img/arch_p20.jpg" alt="After: Campus building, retouched" width="1800" height="1206" loading="lazy"><img class="before" src="img/arch_p20_B4.jpg" alt="Before: Campus building, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Campus building"></div>
+        <figcaption>Sun flare removed · Building site turned to lawn · Sky · Colour</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="campaign" aria-labelledby="a8">
+    <div class="title">
+      <h2 id="a8">Office interiors</h2>
+      <dl><div><dt>Project by</dt><dd>Kinzo</dd></div><div><dt>Location</dt><dd>Germany</dd></div><div><dt>Photo</dt><dd>Werner Huthmacher</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w12">
+        <div class="ba"><img src="img/arch_p18.jpg" alt="After: Office interiors, retouched" width="1800" height="1198" loading="lazy"><img class="before" src="img/arch_p18_B4.jpg" alt="Before: Office interiors, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Office interiors"></div>
+        <figcaption>Ceiling fittings removed · Signage removed · Floor seams removed · White balance</figcaption>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/arch_p19.jpg" alt="After: Office interiors, retouched" width="1800" height="1504" loading="lazy"><img class="before" src="img/arch_p19_B4.jpg" alt="Before: Office interiors, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Office interiors"></div>
+        <figcaption>Ceiling fittings removed · Floor seams removed · White balance</figcaption>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/arch_p21.jpg" alt="After: Office interiors, retouched" width="1800" height="1200" loading="lazy"><img class="before" src="img/arch_p21_B4.jpg" alt="Before: Office interiors, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Office interiors"></div>
+        <figcaption>Sensors &amp; signs removed · Colour cast neutralised · Floor</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="campaign" aria-labelledby="a9">
+    <div class="title">
+      <h2 id="a9">Casa Itanhangá</h2>
+      <dl><div><dt>Project by</dt><dd>Mauricio Magarão</dd></div><div><dt>Location</dt><dd>Rio de Janeiro</dd></div><div><dt>Photo</dt><dd>MCA Estúdio</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w12">
+        <div class="ba"><img src="img/arch_p12.jpg" alt="After: Casa Itanhangá, retouched" width="1800" height="1200" loading="lazy"><img class="before" src="img/arch_p12_B4.jpg" alt="Before: Casa Itanhangá, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Casa Itanhangá"></div>
+        <figcaption>Window view recovered · Exposure balance · Floor clean-up</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="campaign" aria-labelledby="a10">
+    <div class="title">
+      <h2 id="a10">Miami residence</h2>
+      <dl><div><dt>Project by</dt><dd>Gustavo Marasca</dd></div><div><dt>Location</dt><dd>Miami</dd></div><div><dt>Photo</dt><dd>MCA Estúdio</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w6">
+        <div class="ba"><img src="img/arch_p15.jpg" alt="After: Miami residence, retouched" width="1800" height="1199" loading="lazy"><img class="before" src="img/arch_p15_B4.jpg" alt="Before: Miami residence, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Miami residence"></div>
+        <figcaption>Blown window recovered · Exposure balance · Colour</figcaption>
+      </figure>
+      <figure class="w6">
+        <div class="ba"><img src="img/arch_p14.jpg" alt="After: Miami residence, retouched" width="1197" height="1800" loading="lazy"><img class="before" src="img/arch_p14_B4.jpg" alt="Before: Miami residence, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Miami residence"></div>
+        <figcaption>Window recovered · Reflections cleaned · Colour</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="campaign" aria-labelledby="a11">
+    <div class="title">
+      <h2 id="a11">Pinecrest residence</h2>
+      <dl><div><dt>Project by</dt><dd>Florense</dd></div><div><dt>Location</dt><dd>Miami</dd></div><div><dt>Photo</dt><dd>MCA Estúdio</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w6 c">
+        <div class="ba"><img src="img/arch_p13.jpg" alt="After: Pinecrest residence, retouched" width="1199" height="1800" loading="lazy"><img class="before" src="img/arch_p13_B4.jpg" alt="Before: Pinecrest residence, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Pinecrest residence"></div>
+        <figcaption>Window view recovered · AC fittings removed · Colour</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="campaign" aria-labelledby="a12">
+    <div class="title">
+      <h2 id="a12">CasaCor RJ 2022</h2>
+      <dl><div><dt>Project by</dt><dd>João Panaggio</dd></div><div><dt>Location</dt><dd>Rio de Janeiro</dd></div><div><dt>Photo</dt><dd>MCA Estúdio</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w6 c">
+        <div class="ba"><img src="img/arch_p10.jpg" alt="After: CasaCor RJ 2022, retouched" width="1199" height="1800" loading="lazy"><img class="before" src="img/arch_p10_B4.jpg" alt="Before: CasaCor RJ 2022, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: CasaCor RJ 2022"></div>
+        <figcaption>Skylight fixed · Wood colour · Exposure</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="campaign" aria-labelledby="a13">
+    <div class="title">
+      <h2 id="a13">CasaCor SP 2022</h2>
+      <dl><div><dt>Project by</dt><dd>Marcelo Salum</dd></div><div><dt>Location</dt><dd>São Paulo</dd></div><div><dt>Photo</dt><dd>MCA Estúdio</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w12">
+        <div class="ba"><img src="img/arch_p11.jpg" alt="After: CasaCor SP 2022, retouched" width="1800" height="1198" loading="lazy"><img class="before" src="img/arch_p11_B4.jpg" alt="Before: CasaCor SP 2022, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: CasaCor SP 2022"></div>
+        <figcaption>Windows recovered · Exposure balance · Colour</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="campaign" aria-labelledby="a14">
+    <div class="title">
+      <h2 id="a14">CasaCor</h2>
+      <dl><div><dt>Location</dt><dd>Brazil</dd></div><div><dt>Photo</dt><dd>MCA Estúdio</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w6 c">
+        <div class="ba"><img src="img/arch_p08.jpg" alt="After: CasaCor, retouched" width="1199" height="1800" loading="lazy"><img class="before" src="img/arch_p08_B4.jpg" alt="Before: CasaCor, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: CasaCor"></div>
+        <figcaption>AC unit removed · Colour · Exposure</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="campaign" aria-labelledby="a15">
+    <div class="title">
+      <h2 id="a15">Residence</h2>
+      <dl><div><dt>Project by</dt><dd>AF Arquitetura</dd></div><div><dt>Location</dt><dd>Brazil</dd></div><div><dt>Photo</dt><dd>MCA Estúdio</dd></div></dl>
+    </div>
+    <div class="grid">
+      <figure class="w6 c">
+        <div class="ba"><img src="img/arch_p17.jpg" alt="After: Residence, retouched" width="1200" height="1800" loading="lazy"><img class="before" src="img/arch_p17_B4.jpg" alt="Before: Residence, unretouched original" loading="lazy"><span class="line"></span><span class="knob"></span><span class="tag b">Before</span><span class="tag a">After</span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: Residence"></div>
+        <figcaption>AC unit removed · Colour · Exposure</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <section class="about" id="about" aria-labelledby="about-h">
     <h2 id="about-h">About</h2>
     <figure class="about-photo"><img src="../images/guilherme-rebelo.jpg" alt="Portrait of Guilherme Rebelo" width="1000" height="1000" loading="lazy"></figure>
     <div class="about-text">
       <p>Born in São Paulo, graduated in Architecture in 2008.</p>
-      <p>Alongside architectural photography, I’ve worked as a retoucher since 2016: first leading the retouching team at Global Brands Group in London, then freelance for automotive and fashion campaigns. Since 2025, generative AI has been part of my everyday workflow.</p>
+      <p>Alongside architectural photography, I’ve worked as a retoucher since 2016: first leading the retouching team at Global Brands Group in London, then freelance for automotive and fashion campaigns and for architectural photographers in Berlin and Brazil. Since 2025, generative AI has been part of my everyday workflow.</p>
       <p>I work between Lisbon and São Paulo and I’m available for projects anywhere.</p>
     </div>
   </section>
@@ -239,7 +496,7 @@
 </main>
 
 <footer id="contact">
-  <p class="footer-text">Have a campaign that needs finishing? Write to <a href="mailto:estudio@guilhermerebelo.com">estudio@guilhermerebelo.com</a></p>
+  <p class="footer-text">Have images that need finishing? Write to <a href="mailto:estudio@guilhermerebelo.com">estudio@guilhermerebelo.com</a></p>
   <div class="footer-info">
     <span>Lisbon · São Paulo</span>
     <a href="tel:+351912202000">+351 912 202 000</a>
